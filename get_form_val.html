@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: arial;
+        }
+        .box {
+            background: pink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        </style>
+    <title>Learn jQuery</title>
+</head>
+<body>
+    <h1>Form Events</h1>
+    <form action="" id="sform" class="action">
+        <label for="">Name</label><input type="email" id="sname" class="sname"><br><br>
+        <label for="">Class</label><input type="text" id="sclass" class="sclass"><br><br>
+        <label for="">Country</label>
+        <select  id="scountry" class="scountry">
+            <option value="Ind">Ind</option>
+            <option value="Pak">Pak</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+    <div id="test" style="border:1px solid red;margin-top: 20px;"></div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- <script src="events.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            $('#sform').submit(function(){
+                var name = $('#sname').val();
+                var classname = $('#sclass').val();
+                var country = $('#scountry').val(); 
+                alert("hello" +name + "Class: "+classname + "Country: "+country);
+            });
+        });
+    </script>
+</body>
+</html>

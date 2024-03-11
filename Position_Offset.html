@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: arial;
+      }
+      .box {
+        background: green;
+        padding: 10px;
+        border: 10px solid #000;
+      }
+
+      .boxbg {
+        background: yellow;
+      }
+      #test {
+        background: pink;
+        padding: 5px;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+    <title>..Wrap ALL & Wrap Inner..</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>..Wrap ALL & Wrap Inner..</h1>
+    <div class="box test" id="box">
+      <h2>Test Box</h2>
+      <p>
+        Lorem ipsum<span>, dolor sit amet</span> consectetur adipisicing elit.
+        Temporibus tenetur vel hic, modi incidunt nisi fugiat ea dicta fuga
+        voluptate ipsam, blanditiis doloremque aliquid ut iusto quas minus sunt
+        eum.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+        tenetur vel hic, modi incidunt nisi fugiat ea dicta fuga voluptate
+        ipsam, blanditiis doloremque aliquid ut iusto quas minus sunt eum.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+        tenetur vel hic, modi incidunt nisi fugiat ea dicta fuga voluptate
+        ipsam, blanditiis doloremque aliquid ut iusto quas minus sunt eum.
+      </p>
+    </div>
+    <br />
+
+    <br />
+    <br />
+    <button id="positionBtn">Position</button>
+    <button id="offSetBtn">OffSet</button>
+    <script>
+      $(document).ready(function () {
+        $("#positionBtn").click(function () {
+          // console.log($('#box h2').position());
+
+          // for different left and right
+          var x = $("#box h2").position();
+          console.log("Top: " + x.top + " Left: " + x.left);
+        });
+        $("#offSetBtn").click(function () {
+          // console.log($('#box h2').offset());
+
+          // var y =$('#box h2').offset();
+          // console.log("Top: "+ y.top + " Left: "+y.left);
+
+          // to set values using offset
+          $("#box").offset({ top: 50, left: 50 });
+        });
+      });
+    </script>
+  </body>
+</html>

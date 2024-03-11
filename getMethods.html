@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: arial;
+        }
+        .box {
+            background: pink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+    <title>Learn jQuery</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>JQuery Implementations...</h1>
+    <div class="box test" id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus tenetur vel hic, modi incidunt nisi fugiat ea dicta fuga voluptate ipsam, blanditiis doloremque aliquid ut iusto quas minus sunt eum.</p>
+    </div>
+    <script src="methodEvent.js"> </script>
+    <script>
+        $(document).ready(function(){
+            // var a= $('.box p').html();
+            var a= $('.box p').attr('class');
+            console.log(a);
+        });
+    </script>
+</body>
