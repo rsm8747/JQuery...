@@ -7,10 +7,15 @@
       body {
         font-family: arial;
       }
-      #box {
+      #first {
         background: green;
         padding: 10px;
-        border: 10px solid #000;
+        border: 3px solid #000;
+      }
+      #second {
+        background: rgb(173, 135, 64);
+        padding: 10px;
+        border: 3px solid #000;
       }
 
       .boxbg {
@@ -33,8 +38,8 @@
   </head>
   <body>
     <h1>..Wrap ALL & Wrap Inner..</h1>
-    <div id="box">
-      <h2 >Test Box</h2>
+    <div id="first" >
+      
       <p>
         Lorem ipsum<span>, dolor sit amet</span> consectetur adipisicing elit.
         Temporibus tenetur vel hic, modi incidunt nisi fugiat ea dicta fuga
@@ -43,41 +48,32 @@
       </p>
       
     </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    <div id="second" >
+      
+        <p>
+          Lorem ipsum<span>, dolor sit amet</span> consectetur adipisicing elit.
+          Temporibus tenetur vel hic, modi incidunt nisi fugiat ea dicta fuga
+          voluptate ipsam, blanditiis doloremque aliquid ut iusto quas minus sunt
+          eum.
+        </p>
+        
+      </div>
     <br />
 
     <br />
     <br />
-    <button id="fadeInBtn">Fade In</button>
-    <button id="fadeOutBtn">Fade Out</button>
-    <button id="fadeToggleBtn">Fade Toggle</button>
-    <button id="fadeToBtn">Fade To</button>
     <script>
       $(document).ready(function () {
+        // $('div p').first().css('background','gold');
 
-        $('#fadeOutBtn').click(function(){
-
-            // time for fade out
-            // $('#box').fadeOut(10000);
-    
-            // method slow & fast
-            $('#box').fadeOut("slow");
-           
-        });
-        $('#fadeInBtn').click(function(){
-                                //fadeIn having two methods slow & fast
-                    // $('#box').fadeIn(10000);
-                    $('#box').fadeIn('slow');
-        });
-        $('#fadeToggleBtn').click(function(){
-            // having two methods slow and fast
-            // $('#box').fadeToggle('slow');
-            $('#box').fadeToggle(1000);
-        });
-        $('#fadeToBtn').click(function(){
-            $('#box').fadeTo(2000,0.2,function(){
-                console.log('Now it is show');
-            });
-        });
+        // this is find and get second paragraph
+        $('#second p').first().css('background','gold');
       });
     </script>
   </body>
