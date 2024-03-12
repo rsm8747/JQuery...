@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: arial;
+      }
+      #box {
+        background: lightgreen;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 2px solid #000;
+        position: relative;
+      }
+
+      .boxbg {
+        background: yellow;
+      }
+      #test {
+        background: pink;
+        padding: 5px;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+    <title>jQuery</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Animate Stop Method</h1>
+    <div id="box">
+      <h2 >Test Box</h2>
+      
+      
+    </div>
+    <br />
+
+    <br />
+    <br />
+    <button id="animateBtn">Animate</button>
+    <button id="stopBtn">Stop (Pause)</button>
+    <button id="stopEndBtn">Stop at End</button>
+    <script>
+      $(document).ready(function () {
+        $('#animateBtn').click(function(){
+            // $('#box').animate({
+            //     left : "150px", 
+            //     // width : "+=100px",
+            //     // width : "hide",
+            //     width : 'toggle',
+            //     fontSize : '25px',
+            //     borderWidth : '9px'
+            // });
+
+            // $('#box').animate({left : "150px"});
+            // $('#box').animate({top : '150px'});
+            // $('#box').animate({width : '250px'});
+            $('#box').animate({left : '200px'},3000);
+            $('#box').click({fontSize : '25px'},2000);
+
+        
+        });
+        $('#stopBtn').click(function(){
+            // $('#box').stop(true, true);
+            $('#box').stop();
+        });
+        $('#stopEndBtn').click(function(){
+            $('#box').stop(true, true);
+            
+        });
+       
+        
+      });
+    </script>
+  </body>
+</html>

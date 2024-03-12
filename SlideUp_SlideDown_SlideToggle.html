@@ -47,37 +47,37 @@
 
     <br />
     <br />
-    <button id="fadeInBtn">Fade In</button>
-    <button id="fadeOutBtn">Fade Out</button>
-    <button id="fadeToggleBtn">Fade Toggle</button>
-    <button id="fadeToBtn">Fade To</button>
+    <button id="slideUpBtn">Slide Up</button>
+    <button id="slideDownBtn">SLide Down</button>
+    <button id="slideToggleBtn">slide Toggle</button>
     <script>
       $(document).ready(function () {
+        $('#slideUpBtn').click(function(){
+          // having slow nd fast method nd also specify time
+          // $('#box').slideUp('slow');
+          // $('#box').slideUp(1000);
+          $('#box').slideUp(1000,function(){
+              console.log('Now it is hiding...')
+          });
+        });
 
-        $('#fadeOutBtn').click(function(){
+        $('#slideDownBtn').click(function(){
+          // $('#box').slideDown('slow');
+          // $('#box').slideDown(2000);
+          $('#box').slideDown(2000,function(){
+            console.log('Now it is showing...')
+          });
+        });
 
-            // time for fade out
-            // $('#box').fadeOut(10000);
-    
-            // method slow & fast
-            $('#box').fadeOut("slow");
-           
+        $('#slideToggleBtn').click(function(){
+          // $('#box').slideToggle(slow);
+          // $('#box').slideToggle(2000);
+          $('#box').slideToggle(2000, function(){
+            console.log('Now it is Toggling(1st hide then 2nd click for showing..)')
+          });
         });
-        $('#fadeInBtn').click(function(){
-                                //fadeIn having two methods slow & fast
-                    // $('#box').fadeIn(10000);
-                    $('#box').fadeIn('slow');
-        });
-        $('#fadeToggleBtn').click(function(){
-            // having two methods slow and fast
-            // $('#box').fadeToggle('slow');
-            $('#box').fadeToggle(1000);
-        });
-        $('#fadeToBtn').click(function(){
-            $('#box').fadeTo(2000,0.2,function(){
-                console.log('Now it is show');
-            });
-        });
+
+        
       });
     </script>
   </body>

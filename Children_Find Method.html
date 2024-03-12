@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>..Wrap ALL & Wrap Inner..</title>
+  <style>
+    #main-outer {
+      background-color: rgb(197, 103, 197);
+      padding: 20px;
+    }
+    #outer {
+      background-color: rgb(202, 162, 87);
+      padding: 20px;
+    }
+    #inner {
+      background-color: pink;
+      padding: 20px;
+    }
+    #inner-box {
+      background-color: rgb(168, 223, 168);
+      padding: 10px;
+      height: 300px;
+      margin: 5px;
+    }
+    #child-C{
+        padding: 2px;
+        border: 2px solid #000;
+    }
+  </style>
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <h1>..jQuery Ancestor Methods..</h1>
+  <div id="main-outer" style="position: relative;">
+    <h2>Main Outer</h2>
+    <div id="outer">
+      <h2 class="test">Outer</h2>
+      <div id="inner" class="row" >
+        <h2 id="child-head">Inner</h2>
+          <div >A</div>
+          <div>B</div>
+          <div class="test">C</div>
+          <div>D</div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <button id="animateBtn">Animate</button>
+  <script>
+    $(document).ready(function(){
+        // $('#inner').children('.test').css('background','red');
+        $('#main-outer').find('.test').css('background','red')
+    });
+  </script>
+</body>
+</html>

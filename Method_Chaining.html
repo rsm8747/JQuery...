@@ -47,37 +47,15 @@
 
     <br />
     <br />
-    <button id="fadeInBtn">Fade In</button>
-    <button id="fadeOutBtn">Fade Out</button>
-    <button id="fadeToggleBtn">Fade Toggle</button>
-    <button id="fadeToBtn">Fade To</button>
+    <button id="animateBtn">Animate</button>
     <script>
       $(document).ready(function () {
+        $('#animateBtn').click(function(){
+          $('#box').css('background','pink').slideUp(2000).slideDown(2000);
+        });
+       
 
-        $('#fadeOutBtn').click(function(){
-
-            // time for fade out
-            // $('#box').fadeOut(10000);
-    
-            // method slow & fast
-            $('#box').fadeOut("slow");
-           
-        });
-        $('#fadeInBtn').click(function(){
-                                //fadeIn having two methods slow & fast
-                    // $('#box').fadeIn(10000);
-                    $('#box').fadeIn('slow');
-        });
-        $('#fadeToggleBtn').click(function(){
-            // having two methods slow and fast
-            // $('#box').fadeToggle('slow');
-            $('#box').fadeToggle(1000);
-        });
-        $('#fadeToBtn').click(function(){
-            $('#box').fadeTo(2000,0.2,function(){
-                console.log('Now it is show');
-            });
-        });
+        
       });
     </script>
   </body>
